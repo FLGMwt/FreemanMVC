@@ -9,9 +9,7 @@
 {
     @Html.Partial("ProductSummary", p)
 }
-@*@{var ps = Model.Products;}
-@Html.DisplayFor(x => ps, "ProductSummary")*@
 
 <div class="btn-group pull-right">
-    @Html.PageLinks(Model.PagingInfo, x => Url.Action("List", new { page = x }))
+    @Html.PageLinks(Model.PagingInfo, x => Url.Action("List", new { page = x, category = Model.CurrentCategory }))
 </div>

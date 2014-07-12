@@ -15,7 +15,7 @@ namespace SportsStore.WebUI.HtmlHelpers
                                               Func<int,string> pageUrl)
         {
             var result = new StringBuilder();
-            for (int i = 1; i < pagingInfo.TotalPages; i++)
+            for (int i = 1; i <= pagingInfo.TotalPages; i++)
             {
                 var tag = new TagBuilder("a");
                 tag.MergeAttribute("href", pageUrl(i));
