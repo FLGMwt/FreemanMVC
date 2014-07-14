@@ -1,7 +1,9 @@
-﻿using SportsStore.Domain.Entities;
+﻿using SportsStore.Domain.Concrete;
+using SportsStore.Domain.Entities;
 using SportsStore.WebUI.Infrastructure.Binders;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -16,6 +18,7 @@ namespace SportsStore.WebUI
             AreaRegistration.RegisterAllAreas();
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             ModelBinders.Binders.Add(typeof(Cart), new CartModelBinder());
+            Database.SetInitializer<EFDbContext>(null);
         }
     }
 }
