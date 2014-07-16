@@ -8,7 +8,7 @@ using System.Web.Mvc;
 
 namespace SportsStore.WebUI.Controllers
 {
-    public class AccountController : Controller
+    public class AccountController
     {
         IAuthProvider authProvider;
 
